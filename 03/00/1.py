@@ -1,0 +1,13 @@
+import random
+random.seed()
+print(random.random())
+print(random.uniform(0,10))
+print(random.triangular(0,10,5))
+print(random.betavariate(.1,.5))
+print(random.expovariate(100))
+print(random.gammavariate(1,2))
+print(random.gauss(1,2))
+print(random.lognormvariate(1,2))
+print(random.vonmisesvariate(1,2))
+print(random.paretovariate(1))
+print(random.weibullvariate(1,2))
