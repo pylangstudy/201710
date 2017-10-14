@@ -1,0 +1,27 @@
+import os
+import stat
+import filecmp
+print(filecmp.cmp('a.txt','b.txt'))
+print(filecmp.cmpfiles('a','b','a.txt'))
+print(filecmp.clear_cache())
+
+d = filecmp.dircmp('a','b')
+print(d)
+print(d.report())
+print(d.report_partial_closure())
+print(d.report_full_closure())
+print(d.left)
+print(d.right)
+print(d.left_list)
+print(d.right_list)
+print(d.common)
+print(d.left_only)
+print(d.right_only)
+print(d.common_dirs)
+print(d.common_files)
+print(d.common_funny)
+print(d.same_files)
+print(d.diff_files)
+print(d.funny_files)
+print(d.subdirs)
+print(filecmp.DEFAULT_IGNORES)
