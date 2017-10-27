@@ -35,7 +35,7 @@ conn.commit()
 # We can also close the connection if we are done with it.
 # Just be sure any changes have been committed or they will be lost.
 conn.close()
-```python
+```
 
 > 保存されたデータは永続的であり、次回のセッションでもそのまま使用できます:
 
@@ -43,7 +43,7 @@ conn.close()
 import sqlite3
 conn = sqlite3.connect('example.db')
 c = conn.cursor()
-```python
+```
 
 > たいてい、SQL 操作では Python 変数の値を使う必要があります。この時、クエリーを Python の文字列操作を使って構築することは安全とは言えないので、すべきではありません。そのようなことをするとプログラムが SQL インジェクション攻撃に対し脆弱になります (https://xkcd.com/327/ ではどうなってしまうかをユーモラスに描いています)。
 
@@ -65,7 +65,7 @@ purchases = [('2006-03-28', 'BUY', 'IBM', 1000, 45.00),
              ('2006-04-06', 'SELL', 'IBM', 500, 53.00),
             ]
 c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
-```python
+```
 
 > SELECT 文を実行した後データを取得する方法は3つありどれを使っても構いません。一つはカーソルをイテレータ (iterator) として扱う、一つはカーソルの fetchone() メソッドを呼んで一致した内の一行を取得する、もう一つは fetchall() メソッドを呼んで一致した全ての行のリストとして受け取る、という3つです。
 
@@ -79,7 +79,7 @@ c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
 ('2006-03-28', 'BUY', 'IBM', 1000, 45.0)
 ('2006-04-06', 'SELL', 'IBM', 500, 53.0)
 ('2006-04-05', 'BUY', 'MSFT', 1000, 72.0)
-```python
+```
 
 ### 参考
 
